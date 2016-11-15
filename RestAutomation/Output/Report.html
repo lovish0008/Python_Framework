@@ -1,0 +1,2120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test Report</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>Test Report</h1>
+<table border=1px><p class='attribute'><td><strong>Start Time:</strong></td><td>2016-11-11 14:52:49</td></p>
+</table><table border=1px><p class='attribute'><td><strong>Duration:</strong></td><td>0:01:14.955000</td></p>
+</table><table border=1px><p class='attribute'><td><strong>Status:</strong></td><td>Pass 48 Error 16</td></p>
+</table>
+<p class='description'>This is a demo report</p>
+</div>
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='passClass'>
+    <td>Main.Tests.Tasks.tasks</td>
+    <td>16</td>
+    <td>16</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',16)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: Test Scenario : testTaskPost : started -- 
+Expected Result : data
+Actual Result :data
+Test Scenario Result : testTaskPost : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: Test Scenario : testTaskGet : started -- 
+Expected Result : data
+Actual Result :data
+Test Scenario Result : testTaskGet : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: Test Scenario : testTaskPut : started -- 
+Expected Result : abcd
+Actual Result :abcd
+Test Scenario Result : testTaskPut : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: Test Scenario : testTaskDelete : started -- 
+Expected Result : 200
+Actual Result : 200
+Test Scenario Result : testTaskDelete : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: Test Scenario : testTaskPost : started -- 
+Expected Result : data
+Actual Result :data
+Test Scenario Result : testTaskPost : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        pass</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: Test Scenario : testTaskGet : started -- 
+Expected Result : data
+Actual Result :data
+Test Scenario Result : testTaskGet : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+        pass</a>
+
+    <div id='div_pt1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.7: Test Scenario : testTaskPut : started -- 
+Expected Result : abcd
+Actual Result :abcd
+Test Scenario Result : testTaskPut : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8')" >
+        pass</a>
+
+    <div id='div_pt1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.8: Test Scenario : testTaskDelete : started -- 
+Expected Result : 200
+Actual Result : 200
+Test Scenario Result : testTaskDelete : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9')" >
+        pass</a>
+
+    <div id='div_pt1.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.9: Test Scenario : testTaskPost : started -- 
+Expected Result : data
+Actual Result :data
+Test Scenario Result : testTaskPost : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.10')" >
+        pass</a>
+
+    <div id='div_pt1.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.10: Test Scenario : testTaskGet : started -- 
+Expected Result : data
+Actual Result :data
+Test Scenario Result : testTaskGet : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.11')" >
+        pass</a>
+
+    <div id='div_pt1.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.11: Test Scenario : testTaskPut : started -- 
+Expected Result : abcd
+Actual Result :abcd
+Test Scenario Result : testTaskPut : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.12')" >
+        pass</a>
+
+    <div id='div_pt1.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.12: Test Scenario : testTaskDelete : started -- 
+Expected Result : 200
+Actual Result : 200
+Test Scenario Result : testTaskDelete : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.13')" >
+        pass</a>
+
+    <div id='div_pt1.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.13: Test Scenario : testTaskPost : started -- 
+Expected Result : data
+Actual Result :data
+Test Scenario Result : testTaskPost : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.14' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.14')" >
+        pass</a>
+
+    <div id='div_pt1.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.14: Test Scenario : testTaskGet : started -- 
+Expected Result : data
+Actual Result :data
+Test Scenario Result : testTaskGet : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.15')" >
+        pass</a>
+
+    <div id='div_pt1.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.15: Test Scenario : testTaskPut : started -- 
+Expected Result : abcd
+Actual Result :abcd
+Test Scenario Result : testTaskPut : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.16' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Task_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.16')" >
+        pass</a>
+
+    <div id='div_pt1.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.16: Test Scenario : testTaskDelete : started -- 
+Expected Result : 200
+Actual Result : 200
+Test Scenario Result : testTaskDelete : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Main.Tests.Appointments.appointments</td>
+    <td>16</td>
+    <td>16</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',16)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: Test Scenario : testAppointmentPost : started -- 
+Expected Result : lovish
+Actual Result :lovish
+Test Scenario Result : testAppointmentPost : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
+        pass</a>
+
+    <div id='div_pt2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.2: Test Scenario : testAppointmentGet : started -- 
+Expected Result : lovish
+Actual Result :lovish
+Test Scenario Result : testAppointmentGet : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.3')" >
+        pass</a>
+
+    <div id='div_pt2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.3: Test Scenario : testAppointmentPut : started -- 
+Expected Result : adfrfg
+Actual Result :adfrfg
+Test Scenario Result : testAppointmentPut : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.4')" >
+        pass</a>
+
+    <div id='div_pt2.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.4: Test Scenario : testAppointmentDelete : started -- 
+Expected Result : 200
+Actual Result : 200
+Test Scenario Result : testAppointmentDelete : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.5')" >
+        pass</a>
+
+    <div id='div_pt2.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.5: Test Scenario : testAppointmentPost : started -- 
+Expected Result : lovish
+Actual Result :lovish
+Test Scenario Result : testAppointmentPost : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.6')" >
+        pass</a>
+
+    <div id='div_pt2.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.6: Test Scenario : testAppointmentGet : started -- 
+Expected Result : lovish
+Actual Result :lovish
+Test Scenario Result : testAppointmentGet : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.7')" >
+        pass</a>
+
+    <div id='div_pt2.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.7: Test Scenario : testAppointmentPut : started -- 
+Expected Result : adfrfg
+Actual Result :adfrfg
+Test Scenario Result : testAppointmentPut : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.8')" >
+        pass</a>
+
+    <div id='div_pt2.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.8: Test Scenario : testAppointmentDelete : started -- 
+Expected Result : 200
+Actual Result : 200
+Test Scenario Result : testAppointmentDelete : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.9')" >
+        pass</a>
+
+    <div id='div_pt2.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.9: Test Scenario : testAppointmentPost : started -- 
+Expected Result : lovish
+Actual Result :lovish
+Test Scenario Result : testAppointmentPost : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.10')" >
+        pass</a>
+
+    <div id='div_pt2.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.10: Test Scenario : testAppointmentGet : started -- 
+Expected Result : lovish
+Actual Result :lovish
+Test Scenario Result : testAppointmentGet : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.11')" >
+        pass</a>
+
+    <div id='div_pt2.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.11: Test Scenario : testAppointmentPut : started -- 
+Expected Result : adfrfg
+Actual Result :adfrfg
+Test Scenario Result : testAppointmentPut : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.12')" >
+        pass</a>
+
+    <div id='div_pt2.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.12: Test Scenario : testAppointmentDelete : started -- 
+Expected Result : 200
+Actual Result : 200
+Test Scenario Result : testAppointmentDelete : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.13')" >
+        pass</a>
+
+    <div id='div_pt2.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.13: Test Scenario : testAppointmentPost : started -- 
+Expected Result : lovish
+Actual Result :lovish
+Test Scenario Result : testAppointmentPost : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.14' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.14')" >
+        pass</a>
+
+    <div id='div_pt2.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.14: Test Scenario : testAppointmentGet : started -- 
+Expected Result : lovish
+Actual Result :lovish
+Test Scenario Result : testAppointmentGet : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.15')" >
+        pass</a>
+
+    <div id='div_pt2.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.15: Test Scenario : testAppointmentPut : started -- 
+Expected Result : adfrfg
+Actual Result :adfrfg
+Test Scenario Result : testAppointmentPut : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.16' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Appointment_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.16')" >
+        pass</a>
+
+    <div id='div_pt2.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.16: Test Scenario : testAppointmentDelete : started -- 
+Expected Result : 200
+Actual Result : 200
+Test Scenario Result : testAppointmentDelete : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Main.Tests.Documents.documents</td>
+    <td>16</td>
+    <td>0</td>
+    <td>0</td>
+    <td>16</td>
+    <td><a href="javascript:showClassDetail('c3',16)">Detail</a></td>
+</tr>
+
+<tr id='ft3.1' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.1')" >
+        error</a>
+
+    <div id='div_ft3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.1: Test Scenario : testDocumentPost : started -- 
+Expected Result : heye
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 39, in Document_Post
+    documents.o = json.loads(response.text)
+  File "C:\Python27\lib\json\__init__.py", line 310, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 346, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 364, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.2' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.2')" >
+        error</a>
+
+    <div id='div_ft3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.2: Test Scenario : testDocumentGet : started -- 
+Expected Result : heye
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 54, in Document_Get
+    response = requests.get(url + str(documents.o["primaryKey"]), auth=(username, password))
+TypeError: 'int' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.3' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.3')" >
+        error</a>
+
+    <div id='div_ft3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.3: Test Scenario : testDocumentPut : started -- 
+Expected Result : nazimdsd
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 68, in Document_Put
+    response = requests.put(url + str(documents.o["primaryKey"]), data=json.dumps(get), auth=(username,password))
+TypeError: 'int' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.4' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.4')" >
+        error</a>
+
+    <div id='div_ft3.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.4: Test Scenario : testDocumentDelete : started -- 
+Expected Result : 200
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 80, in Document_Delete
+    response = requests.delete(url + str(documents.obj["primaryKey"]), auth=(username,password))
+TypeError: 'int' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.5' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.5')" >
+        error</a>
+
+    <div id='div_ft3.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.5: Test Scenario : testDocumentPost : started -- 
+Expected Result : heye
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 39, in Document_Post
+    documents.o = json.loads(response.text)
+  File "C:\Python27\lib\json\__init__.py", line 310, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 346, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 364, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.6' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.6')" >
+        error</a>
+
+    <div id='div_ft3.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.6: Test Scenario : testDocumentGet : started -- 
+Expected Result : heye
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 54, in Document_Get
+    response = requests.get(url + str(documents.o["primaryKey"]), auth=(username, password))
+TypeError: 'int' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.7' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.7')" >
+        error</a>
+
+    <div id='div_ft3.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.7: Test Scenario : testDocumentPut : started -- 
+Expected Result : nazimdsd
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 68, in Document_Put
+    response = requests.put(url + str(documents.o["primaryKey"]), data=json.dumps(get), auth=(username,password))
+TypeError: 'int' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.8' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.8')" >
+        error</a>
+
+    <div id='div_ft3.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.8: Test Scenario : testDocumentDelete : started -- 
+Expected Result : 200
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 80, in Document_Delete
+    response = requests.delete(url + str(documents.obj["primaryKey"]), auth=(username,password))
+TypeError: 'int' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.9' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.9')" >
+        error</a>
+
+    <div id='div_ft3.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.9: Test Scenario : testDocumentPost : started -- 
+Expected Result : heye
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 39, in Document_Post
+    documents.o = json.loads(response.text)
+  File "C:\Python27\lib\json\__init__.py", line 310, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 346, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 364, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.10' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.10')" >
+        error</a>
+
+    <div id='div_ft3.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.10: Test Scenario : testDocumentGet : started -- 
+Expected Result : heye
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 54, in Document_Get
+    response = requests.get(url + str(documents.o["primaryKey"]), auth=(username, password))
+TypeError: 'int' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.11' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.11')" >
+        error</a>
+
+    <div id='div_ft3.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.11: Test Scenario : testDocumentPut : started -- 
+Expected Result : nazimdsd
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 68, in Document_Put
+    response = requests.put(url + str(documents.o["primaryKey"]), data=json.dumps(get), auth=(username,password))
+TypeError: 'int' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.12' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.12')" >
+        error</a>
+
+    <div id='div_ft3.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.12: Test Scenario : testDocumentDelete : started -- 
+Expected Result : 200
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 80, in Document_Delete
+    response = requests.delete(url + str(documents.obj["primaryKey"]), auth=(username,password))
+TypeError: 'int' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.13' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.13')" >
+        error</a>
+
+    <div id='div_ft3.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.13: Test Scenario : testDocumentPost : started -- 
+Expected Result : heye
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 39, in Document_Post
+    documents.o = json.loads(response.text)
+  File "C:\Python27\lib\json\__init__.py", line 310, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 346, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 364, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.14' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.14')" >
+        error</a>
+
+    <div id='div_ft3.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.14: Test Scenario : testDocumentGet : started -- 
+Expected Result : heye
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 54, in Document_Get
+    response = requests.get(url + str(documents.o["primaryKey"]), auth=(username, password))
+TypeError: 'int' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.15' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.15')" >
+        error</a>
+
+    <div id='div_ft3.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.15: Test Scenario : testDocumentPut : started -- 
+Expected Result : nazimdsd
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 68, in Document_Put
+    response = requests.put(url + str(documents.o["primaryKey"]), data=json.dumps(get), auth=(username,password))
+TypeError: 'int' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.16' class='none'>
+    <td class='errorCase'><div class='testcase'>Document_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.16')" >
+        error</a>
+
+    <div id='div_ft3.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.16: Test Scenario : testDocumentDelete : started -- 
+Expected Result : 200
+Traceback (most recent call last):
+  File "C:\Users\lovish\PycharmProjects\RestAutomation\Main\Tests\Documents.py", line 80, in Document_Delete
+    response = requests.delete(url + str(documents.obj["primaryKey"]), auth=(username,password))
+TypeError: 'int' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Main.Tests.Projects.projects</td>
+    <td>16</td>
+    <td>16</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',16)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
+        pass</a>
+
+    <div id='div_pt4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.1: Test Scenario : testProjectPost : started -- 
+Expected Result : hello
+Actual Result :hello
+Test Scenario Result : testProjectPost : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.2')" >
+        pass</a>
+
+    <div id='div_pt4.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.2: Test Scenario : testProjectGet : started -- 
+Expected Result : hello
+Actual Result :hello
+Test Scenario Result : testProjectGet : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.3')" >
+        pass</a>
+
+    <div id='div_pt4.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.3: Test Scenario : testProjectPut : started -- 
+Expected Result : sjhjjkfk
+Actual Result :sjhjjkfk
+Test Scenario Result : testProjectPut : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.4')" >
+        pass</a>
+
+    <div id='div_pt4.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.4: Test Scenario : testProjectDelete : started -- 
+Expected Result : 200
+Actual Result : 200
+Test Scenario Result : testProjectDelete : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.5')" >
+        pass</a>
+
+    <div id='div_pt4.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.5: Test Scenario : testProjectPost : started -- 
+Expected Result : hello
+Actual Result :hello
+Test Scenario Result : testProjectPost : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.6')" >
+        pass</a>
+
+    <div id='div_pt4.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.6: Test Scenario : testProjectGet : started -- 
+Expected Result : hello
+Actual Result :hello
+Test Scenario Result : testProjectGet : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.7')" >
+        pass</a>
+
+    <div id='div_pt4.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.7: Test Scenario : testProjectPut : started -- 
+Expected Result : sjhjjkfk
+Actual Result :sjhjjkfk
+Test Scenario Result : testProjectPut : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.8')" >
+        pass</a>
+
+    <div id='div_pt4.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.8: Test Scenario : testProjectDelete : started -- 
+Expected Result : 200
+Actual Result : 200
+Test Scenario Result : testProjectDelete : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.9')" >
+        pass</a>
+
+    <div id='div_pt4.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.9: Test Scenario : testProjectPost : started -- 
+Expected Result : hello
+Actual Result :hello
+Test Scenario Result : testProjectPost : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.10')" >
+        pass</a>
+
+    <div id='div_pt4.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.10: Test Scenario : testProjectGet : started -- 
+Expected Result : hello
+Actual Result :hello
+Test Scenario Result : testProjectGet : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.11')" >
+        pass</a>
+
+    <div id='div_pt4.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.11: Test Scenario : testProjectPut : started -- 
+Expected Result : sjhjjkfk
+Actual Result :sjhjjkfk
+Test Scenario Result : testProjectPut : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.12')" >
+        pass</a>
+
+    <div id='div_pt4.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.12: Test Scenario : testProjectDelete : started -- 
+Expected Result : 200
+Actual Result : 200
+Test Scenario Result : testProjectDelete : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Post</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.13')" >
+        pass</a>
+
+    <div id='div_pt4.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.13: Test Scenario : testProjectPost : started -- 
+Expected Result : hello
+Actual Result :hello
+Test Scenario Result : testProjectPost : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.14' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Get</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.14')" >
+        pass</a>
+
+    <div id='div_pt4.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.14: Test Scenario : testProjectGet : started -- 
+Expected Result : hello
+Actual Result :hello
+Test Scenario Result : testProjectGet : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Put</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.15')" >
+        pass</a>
+
+    <div id='div_pt4.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.15: Test Scenario : testProjectPut : started -- 
+Expected Result : sjhjjkfk
+Actual Result :sjhjjkfk
+Test Scenario Result : testProjectPut : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.16' class='hiddenRow'>
+    <td class='none'><div class='testcase'>Project_Delete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.16')" >
+        pass</a>
+
+    <div id='div_pt4.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.16: Test Scenario : testProjectDelete : started -- 
+Expected Result : 200
+Actual Result : 200
+Test Scenario Result : testProjectDelete : SUCCESS 
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>64</td>
+    <td>48</td>
+    <td>16</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>
