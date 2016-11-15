@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="0.031" tests="16" errors="0" skipped="0" failures="16">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_102\jre\bin"/>
+    <property name="java.vm.version" value="25.102-b14"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\Workspace\RestFulServices"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\Workspace\RestFulServices"/>
+    <property name="java.runtime.version" value="1.8.0_102-b14"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\asingla\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="E:\Workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf420967531289688440.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_102\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files (x86)/Java/jre8/bin/server;C:/Program Files (x86)/Java/jre8/bin;C:/Program Files (x86)/Java/jre8/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Java\jdk1.8.0_102\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Apache Software Foundation\apache-maven-3.3.9\bin;E:\eclipse-jee-mars-2-win32-x86_64\eclipse;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\asingla"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="asingla"/>
+    <property name="java.class.path" value="/E:/eclipse-jee-mars-2-win32-x86_64/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.6.2.20150902-0001/jars/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files (x86)\Java\jdk1.8.0_102\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B compile install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_102"/>
+    <property name="java.ext.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\jfr.jar;C:\Program Files (x86)\Java\jdk1.8.0_102\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="E:\Workspace\RestFulServices\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="testProjectPost" classname="com.test.TestProject" time="0.01">
+    <failure message="1" type="java.lang.ArrayIndexOutOfBoundsException">java.lang.ArrayIndexOutOfBoundsException: 1
+	at com.test.TestProject.testProjectPost(TestProject.java:35)
+</failure>
+    <system-out><![CDATA[In OnStart....
+14:23:20.469 [main] INFO  ROOT -  <=== test : TestSuite1 : begin ===> 
+14:23:20.486 [main] INFO  ROOT -  -- test method : testProjectPost : started --
+14:23:20.489 [main] INFO  ROOT - projectEntityType:: null
+]]></system-out>
+  </testcase>
+  <testcase name="testProjectGet" classname="com.test.TestProject" time="0.003">
+    <failure type="java.lang.ExceptionInInitializerError:"><![CDATA[java.lang.ExceptionInInitializerError: null
+	at com.utility.RestWebService.<clinit>(RestWebService.java:26)
+	at com.test.TestProject.testProjectGet(TestProject.java:62)
+]]></failure>
+    <system-out>14:23:20.494 [main] ERROR ROOT -  -- test method : testProjectPost : Failed --java.lang.ArrayIndexOutOfBoundsException: 1
+
+14:23:20.494 [main] INFO  ROOT -  -- test method : testProjectGet : started --
+</system-out>
+  </testcase>
+  <testcase name="testProjectPut" classname="com.test.TestProject" time="0.005">
+    <failure message="2" type="java.lang.ArrayIndexOutOfBoundsException">java.lang.ArrayIndexOutOfBoundsException: 2
+	at com.test.TestProject.testProjectPut(TestProject.java:85)
+</failure>
+    <system-out>14:23:20.501 [main] ERROR ROOT -  -- test method : testProjectGet : Failed --java.lang.ExceptionInInitializerError
+
+14:23:20.501 [main] INFO  ROOT -  -- test method : testProjectPut : started --
+</system-out>
+  </testcase>
+  <testcase name="testProjectDelete" classname="com.test.TestProject" time="0.005">
+    <failure message="Could not initialize class com.utility.RestWebService" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+	at com.test.TestProject.testProjectDelete(TestProject.java:110)
+</failure>
+    <system-out>14:23:20.502 [main] ERROR ROOT -  -- test method : testProjectPut : Failed --java.lang.ArrayIndexOutOfBoundsException: 2
+
+14:23:20.502 [main] INFO  ROOT -  -- test method : testProjectDelete : started --
+</system-out>
+  </testcase>
+  <testcase name="testAppointmentPost" classname="com.test.TestAppointment" time="0">
+    <failure message="7" type="java.lang.ArrayIndexOutOfBoundsException">java.lang.ArrayIndexOutOfBoundsException: 7
+	at com.test.TestAppointment.testAppointmentPost(TestAppointment.java:40)
+</failure>
+    <system-out>14:23:20.503 [main] ERROR ROOT -  -- test method : testProjectDelete : Failed --java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+
+14:23:20.505 [main] INFO  ROOT -  -- test method : testAppointmentPost : started --
+</system-out>
+  </testcase>
+  <testcase name="testAppointmentGet" classname="com.test.TestAppointment" time="0">
+    <failure message="Could not initialize class com.utility.RestWebService" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+	at com.test.TestAppointment.testAppointmentGet(TestAppointment.java:72)
+</failure>
+    <system-out>14:23:20.505 [main] ERROR ROOT -  -- test method : testAppointmentPost : Failed --java.lang.ArrayIndexOutOfBoundsException: 7
+
+14:23:20.506 [main] INFO  ROOT -  -- test method : testAppointmentGet : started --
+</system-out>
+  </testcase>
+  <testcase name="testAppointmentPut" classname="com.test.TestAppointment" time="0">
+    <failure message="5" type="java.lang.ArrayIndexOutOfBoundsException">java.lang.ArrayIndexOutOfBoundsException: 5
+	at com.test.TestAppointment.testAppointmentPut(TestAppointment.java:100)
+</failure>
+    <system-out>14:23:20.507 [main] ERROR ROOT -  -- test method : testAppointmentGet : Failed --java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+
+14:23:20.508 [main] INFO  ROOT -  -- test method : testAppointmentPut : started --
+</system-out>
+  </testcase>
+  <testcase name="testAppointmentDelete" classname="com.test.TestAppointment" time="0">
+    <failure message="Could not initialize class com.utility.RestWebService" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+	at com.test.TestAppointment.testAppointmentDelete(TestAppointment.java:124)
+</failure>
+    <system-out>14:23:20.509 [main] ERROR ROOT -  -- test method : testAppointmentPut : Failed --java.lang.ArrayIndexOutOfBoundsException: 5
+
+14:23:20.509 [main] INFO  ROOT -  -- test method : testAppointmentDelete : started --
+14:23:20.509 [main] INFO  ROOT - primaryKey :: null
+</system-out>
+  </testcase>
+  <testcase name="testTaskPost" classname="com.test.TestTask" time="0">
+    <failure message="8" type="java.lang.ArrayIndexOutOfBoundsException">java.lang.ArrayIndexOutOfBoundsException: 8
+	at com.test.TestTask.testTaskPost(TestTask.java:28)
+</failure>
+    <system-out>14:23:20.510 [main] ERROR ROOT -  -- test method : testAppointmentDelete : Failed --java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+
+14:23:20.511 [main] INFO  ROOT -  -- test method : testTaskPost : started --
+</system-out>
+  </testcase>
+  <testcase name="testTaskGet" classname="com.test.TestTask" time="0">
+    <failure message="Could not initialize class com.utility.RestWebService" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+	at com.test.TestTask.testTaskGet(TestTask.java:53)
+</failure>
+    <system-out>14:23:20.511 [main] ERROR ROOT -  -- test method : testTaskPost : Failed --java.lang.ArrayIndexOutOfBoundsException: 8
+
+14:23:20.512 [main] INFO  ROOT -  -- test method : testTaskGet : started --
+</system-out>
+  </testcase>
+  <testcase name="testTaskPut" classname="com.test.TestTask" time="0.001">
+    <failure message="9" type="java.lang.ArrayIndexOutOfBoundsException">java.lang.ArrayIndexOutOfBoundsException: 9
+	at com.test.TestTask.testTaskPut(TestTask.java:74)
+</failure>
+    <system-out>14:23:20.513 [main] ERROR ROOT -  -- test method : testTaskGet : Failed --java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+
+14:23:20.514 [main] INFO  ROOT -  -- test method : testTaskPut : started --
+</system-out>
+  </testcase>
+  <testcase name="testTaskDelete" classname="com.test.TestTask" time="0.006">
+    <failure message="Could not initialize class com.utility.RestWebService" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+	at com.test.TestTask.testTaskDelete(TestTask.java:99)
+</failure>
+    <system-out>14:23:20.514 [main] ERROR ROOT -  -- test method : testTaskPut : Failed --java.lang.ArrayIndexOutOfBoundsException: 9
+
+14:23:20.515 [main] INFO  ROOT -  -- test method : testTaskDelete : started --
+</system-out>
+  </testcase>
+  <testcase name="testDocumentPost" classname="com.test.TestDocument" time="0">
+    <failure message="10" type="java.lang.ArrayIndexOutOfBoundsException">java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.test.TestDocument.testDocumentPost(TestDocument.java:37)
+</failure>
+    <system-out>14:23:20.516 [main] ERROR ROOT -  -- test method : testTaskDelete : Failed --java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+
+14:23:20.516 [main] INFO  ROOT -  -- test method : testDocumentPost : started --
+</system-out>
+  </testcase>
+  <testcase name="testDocumentGet" classname="com.test.TestDocument" time="0">
+    <failure message="Could not initialize class com.utility.RestWebService" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+	at com.test.TestDocument.testDocumentGet(TestDocument.java:65)
+</failure>
+    <system-out>14:23:20.517 [main] ERROR ROOT -  -- test method : testDocumentPost : Failed --java.lang.ArrayIndexOutOfBoundsException: 10
+
+14:23:20.517 [main] INFO  ROOT -  -- test method : testDocumentGet : started --
+</system-out>
+  </testcase>
+  <testcase name="testDocumentPut" classname="com.test.TestDocument" time="0">
+    <failure message="12" type="java.lang.ArrayIndexOutOfBoundsException">java.lang.ArrayIndexOutOfBoundsException: 12
+	at com.test.TestDocument.testDocumentPut(TestDocument.java:84)
+</failure>
+    <system-out>14:23:20.520 [main] ERROR ROOT -  -- test method : testDocumentGet : Failed --java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+
+14:23:20.521 [main] INFO  ROOT -  -- test method : testDocumentPut : started --
+</system-out>
+  </testcase>
+  <testcase name="testDocumentDelete" classname="com.test.TestDocument" time="0.001">
+    <failure message="Could not initialize class com.utility.RestWebService" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+	at com.test.TestDocument.testDocumentDelete(TestDocument.java:109)
+</failure>
+    <system-out>14:23:20.521 [main] ERROR ROOT -  -- test method : testDocumentPut : Failed --java.lang.ArrayIndexOutOfBoundsException: 12
+
+14:23:20.522 [main] INFO  ROOT -  -- test method : testDocumentDelete : started --
+</system-out>
+  </testcase>
+</testsuite>

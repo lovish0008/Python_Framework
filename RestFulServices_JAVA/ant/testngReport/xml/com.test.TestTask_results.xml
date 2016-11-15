@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite1"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.186">
+  <properties />
+  
+  
+            <testcase name="testTaskDelete" time="0.058" classname="com.test.TestTask" />
+                <testcase name="testTaskGet" time="0.029" classname="com.test.TestTask" />
+                <testcase name="testTaskPost" time="0.038" classname="com.test.TestTask" />
+                <testcase name="testTaskPut" time="0.061" classname="com.test.TestTask" />
+      
+</testsuite>

@@ -1,0 +1,69 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 16, Errors: 0, Skipped: 0, Time elapsed: 0.842 sec <<< FAILURE!
+testProjectPost(com.test.TestProject)  Time elapsed: 0.01 sec  <<< FAILURE!
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at com.test.TestProject.testProjectPost(TestProject.java:35)
+
+testProjectGet(com.test.TestProject)  Time elapsed: 0.003 sec  <<< FAILURE!
+java.lang.ExceptionInInitializerError: null
+	at com.utility.RestWebService.<clinit>(RestWebService.java:26)
+	at com.test.TestProject.testProjectGet(TestProject.java:62)
+
+testProjectPut(com.test.TestProject)  Time elapsed: 0.005 sec  <<< FAILURE!
+java.lang.ArrayIndexOutOfBoundsException: 2
+	at com.test.TestProject.testProjectPut(TestProject.java:85)
+
+testProjectDelete(com.test.TestProject)  Time elapsed: 0.005 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+	at com.test.TestProject.testProjectDelete(TestProject.java:110)
+
+testAppointmentPost(com.test.TestAppointment)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.ArrayIndexOutOfBoundsException: 7
+	at com.test.TestAppointment.testAppointmentPost(TestAppointment.java:40)
+
+testAppointmentGet(com.test.TestAppointment)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+	at com.test.TestAppointment.testAppointmentGet(TestAppointment.java:72)
+
+testAppointmentPut(com.test.TestAppointment)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.ArrayIndexOutOfBoundsException: 5
+	at com.test.TestAppointment.testAppointmentPut(TestAppointment.java:100)
+
+testAppointmentDelete(com.test.TestAppointment)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+	at com.test.TestAppointment.testAppointmentDelete(TestAppointment.java:124)
+
+testTaskPost(com.test.TestTask)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.ArrayIndexOutOfBoundsException: 8
+	at com.test.TestTask.testTaskPost(TestTask.java:28)
+
+testTaskGet(com.test.TestTask)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+	at com.test.TestTask.testTaskGet(TestTask.java:53)
+
+testTaskPut(com.test.TestTask)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.ArrayIndexOutOfBoundsException: 9
+	at com.test.TestTask.testTaskPut(TestTask.java:74)
+
+testTaskDelete(com.test.TestTask)  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+	at com.test.TestTask.testTaskDelete(TestTask.java:99)
+
+testDocumentPost(com.test.TestDocument)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.ArrayIndexOutOfBoundsException: 10
+	at com.test.TestDocument.testDocumentPost(TestDocument.java:37)
+
+testDocumentGet(com.test.TestDocument)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+	at com.test.TestDocument.testDocumentGet(TestDocument.java:65)
+
+testDocumentPut(com.test.TestDocument)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.ArrayIndexOutOfBoundsException: 12
+	at com.test.TestDocument.testDocumentPut(TestDocument.java:84)
+
+testDocumentDelete(com.test.TestDocument)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService
+	at com.test.TestDocument.testDocumentDelete(TestDocument.java:109)
+

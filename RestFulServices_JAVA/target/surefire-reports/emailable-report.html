@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.result,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.result td,table.result th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.result th {vertical-align:bottom}
+tr.param th {padding-left:1em;padding-right:1em}
+tr.param td {padding-left:.5em;padding-right:2em}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.result td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.result tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">TestSuite1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">16</td><td class="numi">0.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="passed" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">TestSuite1 &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="4">com.test.TestAppointment</td><td><a href="#m1"><b>testAppointmentDelete</b>  </a></td><td class="numi">1</td><td>1473324800509</td><td class="numi">1</td></tr><tr class="failedodd"><td><a href="#m2"><b>testAppointmentGet</b>  </a></td><td class="numi">1</td><td>1473324800506</td><td class="numi">1</td></tr><tr class="failedodd"><td><a href="#m3"><b>testAppointmentPost</b>  </a></td><td class="numi">1</td><td>1473324800504</td><td class="numi">1</td></tr><tr class="failedodd"><td><a href="#m4"><b>testAppointmentPut</b>  </a></td><td class="numi">1</td><td>1473324800508</td><td class="numi">0</td></tr>
+<tr class="failedeven"><td rowspan="4">com.test.TestDocument</td><td><a href="#m5"><b>testDocumentDelete</b>  </a></td><td class="numi">1</td><td>1473324800522</td><td class="numi">0</td></tr><tr class="failedeven"><td><a href="#m6"><b>testDocumentGet</b>  </a></td><td class="numi">1</td><td>1473324800517</td><td class="numi">3</td></tr><tr class="failedeven"><td><a href="#m7"><b>testDocumentPost</b>  </a></td><td class="numi">1</td><td>1473324800516</td><td class="numi">1</td></tr><tr class="failedeven"><td><a href="#m8"><b>testDocumentPut</b>  </a></td><td class="numi">1</td><td>1473324800521</td><td class="numi">0</td></tr>
+<tr class="failedodd"><td rowspan="4">com.test.TestProject</td><td><a href="#m9"><b>testProjectDelete</b>  </a></td><td class="numi">1</td><td>1473324800502</td><td class="numi">1</td></tr><tr class="failedodd"><td><a href="#m10"><b>testProjectGet</b>  </a></td><td class="numi">1</td><td>1473324800494</td><td class="numi">6</td></tr><tr class="failedodd"><td><a href="#m11"><b>testProjectPost</b>  </a></td><td class="numi">1</td><td>1473324800485</td><td class="numi">4</td></tr><tr class="failedodd"><td><a href="#m12"><b>testProjectPut</b>  </a></td><td class="numi">1</td><td>1473324800501</td><td class="numi">1</td></tr>
+<tr class="failedeven"><td rowspan="4">com.test.TestTask</td><td><a href="#m13"><b>testTaskDelete</b>  </a></td><td class="numi">1</td><td>1473324800515</td><td class="numi">0</td></tr><tr class="failedeven"><td><a href="#m14"><b>testTaskGet</b>  </a></td><td class="numi">1</td><td>1473324800512</td><td class="numi">1</td></tr><tr class="failedeven"><td><a href="#m15"><b>testTaskPost</b>  </a></td><td class="numi">1</td><td>1473324800511</td><td class="numi">0</td></tr><tr class="failedeven"><td><a href="#m16"><b>testTaskPut</b>  </a></td><td class="numi">1</td><td>1473324800514</td><td class="numi">0</td></tr>
+</table>
+<h1>TestSuite1</h1>
+<h2 id="m1">com.test.TestProject:testProjectPut</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[null]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<h3>Test Messages</h3>
+-- test method : testProjectPut : Failed --java.lang.ArrayIndexOutOfBoundsException: 2<br/>
+<h3>Failure</h3>
+<p>2</p>
+com.test.TestProject.testProjectPut(TestProject.java:85)
+<br/>34 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">com.test.TestTask:testTaskGet</h2>
+<div style="padding-left:3em">
+<h3>Test Messages</h3>
+-- test method : testTaskGet : Failed --java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService<br/>
+<h3>Failure</h3>
+<p>Could not initialize class com.utility.RestWebService</p>
+com.test.TestTask.testTaskGet(TestTask.java:53)
+<br/>34 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">com.test.TestAppointment:testAppointmentGet</h2>
+<div style="padding-left:3em">
+<h3>Test Messages</h3>
+-- test method : testAppointmentGet : Failed --java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService<br/>
+<h3>Failure</h3>
+<p>Could not initialize class com.utility.RestWebService</p>
+com.test.TestAppointment.testAppointmentGet(TestAppointment.java:72)
+<br/>34 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">com.test.TestDocument:testDocumentDelete</h2>
+<div style="padding-left:3em">
+<h3>Test Messages</h3>
+-- test method : testDocumentDelete : Failed --java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService<br/>
+<h3>Failure</h3>
+<p>Could not initialize class com.utility.RestWebService</p>
+com.test.TestDocument.testDocumentDelete(TestDocument.java:109)
+<br/>34 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">com.test.TestTask:testTaskPut</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[null]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<h3>Test Messages</h3>
+-- test method : testTaskPut : Failed --java.lang.ArrayIndexOutOfBoundsException: 9<br/>
+<h3>Failure</h3>
+<p>9</p>
+com.test.TestTask.testTaskPut(TestTask.java:74)
+<br/>34 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">com.test.TestProject:testProjectGet</h2>
+<div style="padding-left:3em">
+<h3>Test Messages</h3>
+-- test method : testProjectGet : Failed --java.lang.ExceptionInInitializerError<br/>
+<h3>Failure</h3>
+<p>null</p>
+com.test.TestProject.testProjectGet(TestProject.java:62)
+<br/>34 lines not shown
+<p>Caused by null</p>
+com.utility.RestWebService.&lt;clinit&gt;(RestWebService.java:26)
+<br/>at com.test.TestProject.testProjectGet(TestProject.java:62)
+<br/>34 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">com.test.TestProject:testProjectPost</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[null]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<h3>Test Messages</h3>
+-- test method : testProjectPost : Failed --java.lang.ArrayIndexOutOfBoundsException: 1<br/>
+<h3>Failure</h3>
+<p>1</p>
+com.test.TestProject.testProjectPost(TestProject.java:35)
+<br/>34 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">com.test.TestAppointment:testAppointmentPut</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[null]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<h3>Test Messages</h3>
+-- test method : testAppointmentPut : Failed --java.lang.ArrayIndexOutOfBoundsException: 5<br/>
+<h3>Failure</h3>
+<p>5</p>
+com.test.TestAppointment.testAppointmentPut(TestAppointment.java:100)
+<br/>34 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">com.test.TestAppointment:testAppointmentDelete</h2>
+<div style="padding-left:3em">
+<h3>Test Messages</h3>
+-- test method : testAppointmentDelete : Failed --java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService<br/>
+<h3>Failure</h3>
+<p>Could not initialize class com.utility.RestWebService</p>
+com.test.TestAppointment.testAppointmentDelete(TestAppointment.java:124)
+<br/>34 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">com.test.TestProject:testProjectDelete</h2>
+<div style="padding-left:3em">
+<h3>Test Messages</h3>
+-- test method : testProjectDelete : Failed --java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService<br/>
+<h3>Failure</h3>
+<p>Could not initialize class com.utility.RestWebService</p>
+com.test.TestProject.testProjectDelete(TestProject.java:110)
+<br/>34 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">com.test.TestTask:testTaskPost</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[null]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<h3>Test Messages</h3>
+-- test method : testTaskPost : Failed --java.lang.ArrayIndexOutOfBoundsException: 8<br/>
+<h3>Failure</h3>
+<p>8</p>
+com.test.TestTask.testTaskPost(TestTask.java:28)
+<br/>34 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">com.test.TestDocument:testDocumentGet</h2>
+<div style="padding-left:3em">
+<h3>Test Messages</h3>
+-- test method : testDocumentGet : Failed --java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService<br/>
+<h3>Failure</h3>
+<p>Could not initialize class com.utility.RestWebService</p>
+com.test.TestDocument.testDocumentGet(TestDocument.java:65)
+<br/>34 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">com.test.TestDocument:testDocumentPut</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[null]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<h3>Test Messages</h3>
+-- test method : testDocumentPut : Failed --java.lang.ArrayIndexOutOfBoundsException: 12<br/>
+<h3>Failure</h3>
+<p>12</p>
+com.test.TestDocument.testDocumentPut(TestDocument.java:84)
+<br/>34 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">com.test.TestDocument:testDocumentPost</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[null]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<h3>Test Messages</h3>
+-- test method : testDocumentPost : Failed --java.lang.ArrayIndexOutOfBoundsException: 10<br/>
+<h3>Failure</h3>
+<p>10</p>
+com.test.TestDocument.testDocumentPost(TestDocument.java:37)
+<br/>34 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">com.test.TestAppointment:testAppointmentPost</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>[null]</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<h3>Test Messages</h3>
+-- test method : testAppointmentPost : Failed --java.lang.ArrayIndexOutOfBoundsException: 7<br/>
+<h3>Failure</h3>
+<p>7</p>
+com.test.TestAppointment.testAppointmentPost(TestAppointment.java:40)
+<br/>34 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">com.test.TestTask:testTaskDelete</h2>
+<div style="padding-left:3em">
+<h3>Test Messages</h3>
+-- test method : testTaskDelete : Failed --java.lang.NoClassDefFoundError: Could not initialize class com.utility.RestWebService<br/>
+<h3>Failure</h3>
+<p>Could not initialize class com.utility.RestWebService</p>
+com.test.TestTask.testTaskDelete(TestTask.java:99)
+<br/>34 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>
